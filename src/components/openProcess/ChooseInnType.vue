@@ -1,8 +1,7 @@
 <template>
   <div>
     <div class="vux-demo">
-      <img class="logo" src="../assets/vux_logo.png">
-      <h1>helloFromVux</h1>
+      <h1>aaa</h1>
     </div>
     <div>
       <router-link to="/aaa">Go to aaa</router-link>

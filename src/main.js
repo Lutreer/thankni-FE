@@ -4,14 +4,17 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
-import Home from './components/HelloFromVux'
+import Regist from './components/openProcess/Regist'
 
+// 明确地安装路由功能
 Vue.use(VueRouter)
 
-const routes = [{
-  path: '/',
-  component: Home
-}]
+const routes = [
+  {
+    path: '/',
+    component: Regist
+  }
+]
 
 const router = new VueRouter({
   routes
