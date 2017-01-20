@@ -5,8 +5,7 @@
         <div class="inner-logo"></div>
       </grid-item>
     </grid>
-<div @click="newStep"></div>
-    <XButton type="primary" :text="buttonText" v-on:click="newStep"></XButton>
+    <XButton type="primary" :text="buttonText" @click.native="newStep"></XButton>
   </div>
 </template>
 
@@ -28,7 +27,7 @@ export default {
   methods: {
     newStep () {
       debugger
-      console.log("sssssssssssss")
+      console.log('bbbbbbbbbbb')
     }
   }
 }

@@ -8,8 +8,8 @@
 </script>
 
 <style lang="less">
-/*@import './assets/styles/reset.scss';*/
+
 body {
-  background-color: #fbf9fe;
+  background-color: #eee;
 }
 </style>
