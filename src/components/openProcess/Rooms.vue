@@ -6,11 +6,13 @@
       </grid-item>
     </grid>
     <XButton type="primary" :text="buttonText" @click.native="newStep"></XButton>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import { XButton, Grid, GridItem } from 'vux'
+import Router from '../../middlewares/router'
 
 export default {
   components: {
@@ -27,7 +29,8 @@ export default {
   methods: {
     newStep () {
       debugger
-      console.log('bbbbbbbbbbb')
+      Router.push('/list/item/123')
+      console.log('ssss')
     }
   }
 }
@@ -35,7 +38,7 @@ export default {
 
 <style>
 .inner-logo {
-  height: 50px;
-  background-color:#ccc;
+    height: 50px;
+    background-color:#ccc;
 }
 </style>

@@ -5,30 +5,33 @@ var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
 var opn = require('opn')
-
 // http-proxy可以实现转发所有请求代理到后端真实API地址，以实现前后端开发完全分离
-// 在config/index.js中可以对proxyTable想进行配置
+// 在config/index.js中可以对proxyTable进行配置
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = require('./webpack.dev.conf')
 
-// default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
-	// Define HTTP proxies to your custom API backend
-	// https://github.com/chimurai/http-proxy-middleware
+
+// https://github.com/chimurai/http-proxy-middleware
 var proxyTable = config.dev.proxyTable
 
 var app = express()
 var compiler = webpack(webpackConfig)
 
+// 将编译后的文件暂存到内存中
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
 	publicPath: webpackConfig.output.publicPath,
-	quiet: true
+	quiet: true,
+    stats: {
+	    colors: true
+	}
 })
 
 // 热加载使用webpack-dev-middleware在没有webpack-dev-server的时候进行热加载
 var hotMiddleware = require('webpack-hot-middleware')(compiler, {
 		log: () => {}
 	})
+
 // 当html-webpack-plugin模板改变是强制页面重新加载
 compiler.plugin('compilation', function(compilation) {
 	compilation.plugin('html-webpack-plugin-after-emit', function(data, cb) {

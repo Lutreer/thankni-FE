@@ -5,8 +5,8 @@
   "author": "Leasong <lxuidesigner@gmail.com>",
   "private": false,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
+    "dev": "set NODE_ENV=development && node build/dev-server.js",
+    "build": "set NODE_ENV=production && node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
