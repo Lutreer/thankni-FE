@@ -28,7 +28,6 @@ export default {
   },
   methods: {
     newStep () {
-      debugger
       Router.push('/list/item/123')
       console.log('ssss')
     }
