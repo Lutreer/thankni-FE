@@ -94,7 +94,7 @@ var webpackConfig = {
     loaders: utils.cssLoaders({ sourceMap: useCssSourceMap }),
     postcss: [
       require('autoprefixer')({
-        browsers: ['last 2 versions']
+        browsers: ['last 2 versions', 'android >= 4.5', 'ios >= 8']
       })
     ]
   }
