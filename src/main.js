@@ -4,6 +4,7 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import App from './App'
 import router from './middlewares/router'
+import './middlewares/axios'
 
 FastClick.attach(document.body)
 
