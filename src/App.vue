@@ -13,7 +13,6 @@
     },
     mounted () {
       Vue.http.get('/someUrl').then(() => {
-
       }, () => {
 
       })
