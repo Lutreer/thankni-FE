@@ -4,11 +4,10 @@ var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 const vuxLoader = require('vux-loader')
 
-var env = process.env.NODE_ENV
 // check env & config/index.js to decide whether to enable CSS source maps for the
 // various preprocessor loaders added to vue-loader at the end of this file
-var cssSourceMapDev = (env === 'development' && config.dev.cssSourceMap)
-var cssSourceMapProd = (env === 'production' && config.build.productionSourceMap)
+var cssSourceMapDev = (process.env.NODE_ENV === 'development' && config.dev.cssSourceMap)
+var cssSourceMapProd = (process.env.NODE_ENV === 'production' && config.build.productionSourceMap)
 var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
 
 var webpackConfig = {

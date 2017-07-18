@@ -1,13 +1,13 @@
 // https://github.com/shelljs/shelljs
 require('./check-versions')()
 require('shelljs/global')
-env.NODE_ENV = 'production'
-
 var path = require('path')
 var config = require('../config')
 var ora = require('ora')
 var webpack = require('webpack')
 var webpackConfig = require('./webpack.prod.conf')
+
+if (!process.env.NODE_ENV) process.env.NODE_ENV = JSON.parse(config.build.env.NODE_ENV)
 
 console.log(
   '  Tip:\n' +
@@ -15,7 +15,7 @@ console.log(
   '  Opening index.html over file:// won\'t work.\n'
 )
 
-var spinner = ora('building for production...')
+var spinner = ora('building for ' + process.env.NODE_ENV + '...')
 spinner.start()
 
 var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)

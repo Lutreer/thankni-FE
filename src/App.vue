@@ -5,17 +5,17 @@
 </template>
 
 <script>
-  import Vue from 'vue'
+//  import Vue from 'vue'
   export default {
     data () {
       return {
       }
     },
     mounted () {
-      Vue.http.get('/someUrl').then(() => {
-      }, () => {
-
-      })
+//      Vue.http.get('/someUrl').then(() => {
+//      }, () => {
+//
+//      })
 
       this.$nextTick(function () {
         debugger
