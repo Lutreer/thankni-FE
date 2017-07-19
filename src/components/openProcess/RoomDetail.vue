@@ -1,22 +1,14 @@
 <template>
   <div>
-    <grid>
-      <grid-item label="Grid" v-for="i in 9">
-        <div class="inner-logo"></div>
-      </grid-item>
-    </grid>
-    <XButton type="primary" :text="buttonText" @click.native="newStep"></XButton>
+    <button type="primary" :text="buttonText" @click.native="newStep"></button>
   </div>
 </template>
 
 <script>
-import { XButton, Grid, GridItem } from 'vux'
 
 export default {
   components: {
-    XButton,
-    Grid,
-    GridItem
+
   },
   data () {
     return {

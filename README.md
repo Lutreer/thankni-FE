@@ -1,6 +1,6 @@
-# vux-demo
+# vue-vuex-seed
 
-> A Vue.js with vux project
+> A Vue.js with vuex project
 
 ## Build Setup
 

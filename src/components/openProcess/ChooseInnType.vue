@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="vux-demo">
+    <div class="vue+vuex">
       <h1>aaa</h1>
     </div>
     <div>
@@ -8,19 +8,17 @@
       <router-link to="/bbb">Go to bbb</router-link>
 
     </div>
-    <group title="cell demo">
-      <cell title="Vux" value="Cool" is-link></cell>
-    </group>
+    <div title="cell demo">
+      <div value="Cool" is-link></div>
+    </div>
   </div>
 </template>
 
 <script>
-import { Group, Cell } from 'vux'
 
 export default {
   components: {
-    Group,
-    Cell
+
   },
   data () {
     return {
@@ -31,7 +29,7 @@ export default {
 </script>
 
 <style>
-.vux-demo {
+.vuex-demo {
   text-align: center;
 }
 .logo {

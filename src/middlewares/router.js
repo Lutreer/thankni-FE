@@ -1,6 +1,3 @@
-/**
- * Created by Leasong on 2017/1/20.
- */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 

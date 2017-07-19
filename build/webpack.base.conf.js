@@ -2,7 +2,6 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
-const vuxLoader = require('vux-loader')
 
 // check env & config/index.js to decide whether to enable CSS source maps for the
 // various preprocessor loaders added to vue-loader at the end of this file
@@ -100,13 +99,4 @@ var webpackConfig = {
 }
 
 
-module.exports = vuxLoader.merge(webpackConfig, {
-  plugins: [
-    {
-      name: 'vux-ui'
-    },
-    {
-      name: 'duplicate-style'
-    }
-  ]
-})
+module.exports = webpackConfig
