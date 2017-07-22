@@ -1,25 +1,23 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import openProcess from '../components/openProcess/index'
-import Rooms from '../components/openProcess/Rooms'
-import RoomDetail from '../components/openProcess/RoomDetail'
+import omsPage1 from '../views/oms/page1'
 
 Vue.use(VueRouter)
 
 export default new VueRouter({
   routes: [
     {
-      path: '/regist',
-      component: openProcess,
+      path: '/aaa',
+      component: omsPage1,
       children: [
         {
-          path: 'first',
-          component: Rooms
+          path: 'aaa1',
+          component: omsPage1
         },
         {
-          path: 'second',
-          component: RoomDetail
+          path: 'aaa2',
+          component: omsPage1
         }
       ]
     }

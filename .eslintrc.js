@@ -26,6 +26,7 @@ module.exports = {
         // 规定了函数中代码不能够超过多少行
         "max-statements": [2, 30],
         //禁止使用行内注释
-        "no-inline-comments": 2
+        "no-inline-comments": 2,
+        "space-before-function-paren": ["error", "never"]
     }
 }
