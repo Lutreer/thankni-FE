@@ -23,9 +23,18 @@ var webpackConfig = {
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
       'vue$': 'vue/dist/vue.common.js',
+      '@': path.resolve('src'),
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components')
+      'components': path.resolve(__dirname, '../src/components'),
+      'config': path.resolve(__dirname, '../src/config'),
+      'router': path.resolve(__dirname, '../src/router'),
+      'middlewares': path.resolve(__dirname, '../src/middlewares'),
+      'services': path.resolve(__dirname, '../src/services'),
+      'store': path.resolve(__dirname, '../src/store'),
+      'utils': path.resolve(__dirname, '../src/utils'),
+      'views': path.resolve(__dirname, '../src/views'),
+      'static': path.resolve(__dirname, '../static')
     }
   },
   resolveLoader: {
