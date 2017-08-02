@@ -1,7 +1,8 @@
-import * as types from '../mutation-type';
-import { loginService } from '../../services/user';
+import * as TYPES from '../mutation-type'
+import { loginService } from '../../services/user'
 
 const User = {
+  namespaced: true,
   state: {
     account: '',
     status: '',
@@ -24,20 +25,20 @@ const User = {
 
   },
   mutations: {
-    [types.USER.LOGIN](state, loginUser){
-      state.account = loginUser.account;
-      state.token = loginUser.token;
-      state.name = loginUser.name;
+    [TYPES.USER.LOGIN](state, loginUser) {
+      state.account = loginUser.account
+      state.token = loginUser.token
+      state.name = loginUser.name
     }
   },
   actions: {
-    login({ commit }, loginInfo){
+    login({ commit }, loginInfo) {
       return new Promise((resolve, reject) => {
         loginService(loginInfo).then(response => {
-          commit(types.USER.LOGIN, response);
-          resolve();
+          commit(TYPES.USER.LOGIN, response)
+          resolve()
         }).catch(error => {
-            reject(error);
+          reject(error)
         })
       })
     }
