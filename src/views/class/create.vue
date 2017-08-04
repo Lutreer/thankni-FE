@@ -2,16 +2,13 @@
   <el-dialog title="添加分类" :visible.sync="getShowCreateDialog" :before-close="handleClose">
     <el-form>
       <el-form-item label="名称" label-width="50">
-        <el-input value="bbb" auto-complete="off"></el-input>
+        <el-input value="bbb" placeholder="最多四个字，如：新鲜水果，限时抢购" auto-complete="off"></el-input>
       </el-form-item>
-      <el-form-item label="活动区域" label-width="50">
-        <el-select value="shanghai" placeholder="请选择活动区域">
-          <el-option label="区域一" value="shanghai"></el-option>
-          <el-option label="区域二" value="beijing"></el-option>
-        </el-select>
+      <el-form-item label="描述">
+        <el-input type="textarea" placeholder="对该分类的一些介绍" ></el-input>
       </el-form-item>
     </el-form>
-    <div class="dialog-footer">
+    <div class="dialog-footer dialog-footer-btn-group">
       <el-button @click="handleClose">取 消</el-button>
       <el-button type="primary" @click="comfirm">确 定</el-button>
     </div>

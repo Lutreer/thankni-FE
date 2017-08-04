@@ -1,6 +1,6 @@
   <template>
     <div>
-      <div class="list-top-btn-group">
+      <div class="btn-group-right">
         <router-link to="/product/create"><el-button type="primary" icon="plus" >新增</el-button></router-link>
       </div>
       <el-table

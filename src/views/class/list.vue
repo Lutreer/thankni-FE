@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="list-top-btn-group">
+    <div class="btn-group-right">
       <el-button type="primary" icon="plus" @click="toShowCreateClassDialog">新增</el-button>
     </div>
     <el-table
@@ -69,3 +69,8 @@
 
   }
 </script>
+<style lang="scss" scoped>
+  .operate-btn{
+    margin-bottom: 10px;
+  }
+</style>

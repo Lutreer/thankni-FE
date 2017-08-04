@@ -1,8 +1,18 @@
 a {
   text-decoration: none;
 }
-.list-top-btn-group {
+.btn-group-right {
   display: flex;
   justify-content:flex-end;
   margin-bottom: 10px;
+}
+.btn-group-left {
+  display: flex;
+  justify-content:flex-start;
+  margin-top: 10px;
+}
+.btn-group-center {
+  display: flex;
+  justify-content:center;
+  margin-top: 10px;
 }
